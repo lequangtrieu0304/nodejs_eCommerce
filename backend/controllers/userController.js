@@ -94,26 +94,26 @@ const update = async (req, res) => {
         if(!updateUser) {
             return res.status(404).send({message: 'user khong ton tai'})
         }
-        const hashPassword = await bcrypt.hash(password, 10);
+        const salt = await bcrypt.genSalt(10);
+        const hashPassword = await bcrypt.hash(password, salt);
         updateUser.name = name || updateUser.name;
         updateUser.email = email || updateUser.email;
         updateUser.password = hashPassword || updateUser.password;
 
         const user = await updateUser.save();
-        res.status(201).send({
+        res.status(200).send({
             message:'cap nhat thanh cong',
             _id: user._id,
             name: user.name,
             email: user.email,
             isAdmin: user.isAdmin,
+            token: accessToken(user)
         });   
     }
     catch (err){
         console.log(err);
     }
 }
-
-
 
 export default {
     createAdmin,

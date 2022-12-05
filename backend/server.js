@@ -6,6 +6,7 @@ import bodyParser from 'body-parser';
 import config from './config/config';
 import userRouter from './routers/userRouter';
 import orderRouter from './routers/orderRouter';
+import productRouter from './routers/productRouter';
 const app = express();
 const PORT = 3001;
 
@@ -42,6 +43,7 @@ app.get('/api/products/:id', (req, res) => {
 
 app.use('/api/users', userRouter);
 app.use('/api/orders', orderRouter);
+app.use('/api/products', productRouter);
 
 app.listen(PORT, () => {
     console.log(`Server at http://localhost:${PORT}`);

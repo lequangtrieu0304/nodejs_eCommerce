@@ -107,8 +107,8 @@ header a:hover {
 .fa-user-secret,
 .fa-cart-shopping,
 .fa-right-to-bracket {
-    padding-right: 1rem;
-    font-size: 2.4rem;
+    padding-right: 0.5rem;
+    font-size: 1.6rem;
 }
 
 .cart-header {
@@ -464,4 +464,114 @@ input {
 .order-id {
     padding: 1rem 0 1rem 1rem;
     font-size: 2.2rem;
+}
+
+/* dashboard */
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 1rem;
+}
+
+.dashboard h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.dashboard-menu {
+    flex: 1 1 20rem;
+    background-color: #F2F2F2;
+    font-weight: 700;
+}
+
+.dashboard-menu a {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.dashboard-menu li.selected a {
+    background-color: #c0c0c0;
+    color: #9E160A;
+}
+
+.dashboard-menu a:hover {
+    background-color: #c0c0c0;
+}
+
+.dashboard-menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard-menu li {
+    margin-bottom: 1rem;
+    list-style-type: none;
+}
+
+.dashboard-content {
+    flex: 4 1 80rem;
+    padding: 1rem;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.summary-item > li {
+    border: 0.1rem solid #e0e0e0;
+    margin: 2rem;
+    flex: 1 1 20rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.summary-title {
+    background-color: #F2F2F2;;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.summary-body {
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+.summary-title.color1{
+    background-color: rgb(218, 167, 175);
+}
+.summary-title.color2{
+    background-color: rgba(125, 218, 125, 0.823);
+}
+.summary-title.color3{
+    background-color: rgba(147, 147, 215, 0.753);
+}
+
+/* productlist */
+table {
+    width: 100%;
+}
+
+th{
+    text-align: left;
+}
+
+tbody > tr:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+td {
+    padding: 0.5rem;
+}
+
+.product-list tbody button {
+    background-color: #f0f0f0;
+    border: 0.1rem solid #7E7E7E;
 }

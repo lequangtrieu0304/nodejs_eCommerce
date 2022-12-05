@@ -1,10 +1,10 @@
 import axios from "axios"
 import { getUserInfo } from "../localStorage";
 
-export const getProduct = async (id) => {
+export const getProduct = async () => {
     try{
         const response = await axios({
-            url: `http://localhost:3001/api/products/${id}`,
+            url: `http://localhost:3001/api/products`,
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

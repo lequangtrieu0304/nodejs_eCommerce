@@ -4,7 +4,7 @@ const cartItems = getCartItems();
 
 const Header = {
     render: () => {
-        const { name } = getUserInfo();
+        const { name, isAdmin } = getUserInfo();
         return `
         <div class="brand">
             <a href="/#/">Ontaphe2022</a>
@@ -22,6 +22,10 @@ const Header = {
                     </div>   
                 </a>
             </div>
+            <div>
+                ${isAdmin ? `<a href="/#/dashboard">Dashboard</a>` : ''}
+            </div>
+          
         </div>
         `;
     },
