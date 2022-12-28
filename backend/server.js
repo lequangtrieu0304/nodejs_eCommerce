@@ -43,7 +43,7 @@ app.get('/api/products/:id', (req, res) => {
 
 app.use('/api/users', userRouter);
 app.use('/api/orders', orderRouter);
-app.use('/api/products', productRouter);
+// app.use('/api/products', productRouter);
 
 app.listen(PORT, () => {
     console.log(`Server at http://localhost:${PORT}`);

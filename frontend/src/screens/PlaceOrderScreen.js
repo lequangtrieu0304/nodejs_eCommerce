@@ -53,7 +53,7 @@ const PlaceOrderScreen = {
         const {orderItems, shipping, payment, itemsPrice, shippingPrice, taxPrice, totalPrice} = convertCartOrder();
         return `
             <div>
-                ${checkoutSteps.render({step1: true, step2: true, step3: true, step4: true})}\
+                ${checkoutSteps.render({step1: true, step2: true, step3: true, step4: true})}
                 <div class="order">
                     <div class="order-info">
                         <div>

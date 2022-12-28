@@ -18,6 +18,7 @@ const ProductListScreen = {
                             <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>IMAGE</th>
                                     <th>NAME</th>
                                     <th>PRICE</th>
                                     <th>CATEGORY</th>
@@ -29,13 +30,14 @@ const ProductListScreen = {
                                 ${products.map(product => `
                                     <tr>
                                         <td>${product._id}</td>
+                                        <td><img src="${product.image}" alt="${product.name}"/</td>
                                         <td>${product.name}</td>
                                         <td>${product.price}</td>
                                         <td>${product.category}</td>
                                         <td>${product.brand}</td>
                                         <td>
-                                            <button id="${product._id}" clasa="eidt-button">Edit</button>
-                                            <button id="${product._id}" clasa="delete-button">Delete</button>
+                                            <button id="${product._id}" class="edit-button"><i class="fa-regular fa-pen-to-square"></i>Edit</button>
+                                            <button id="${product._id}" class="delete-button"><i class="fa-solid fa-trash-can"></i>Delete</button>
                                         </td>
                                     </tr>
                                 `).join('')

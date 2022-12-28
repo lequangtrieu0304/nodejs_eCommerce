@@ -13,15 +13,8 @@ export const clearCart = () => {
     localStorage.removeItem('cartItems');
 }
 
-export const setUserInfo = ({
-    _id = '',
-    name = '',
-    email = '',
-    password = '',
-    token = '',
-    isAdmin = false,
-}) => {
-    localStorage.setItem('userInfo', JSON.stringify({_id, name, email, password, token, isAdmin}))
+export const setUserInfo = (data) => {
+    localStorage.setItem('userInfo', JSON.stringify(data))
 }
 
 export const getUserInfo = () => {
