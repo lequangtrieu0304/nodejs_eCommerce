@@ -1,4 +1,4 @@
-import { getProduct } from '../api/api';
+import { getProduct, getProducts } from '../api/api';
 import Rating from '../components/Rating';
 import { parseRequestUrl } from '../utils'
 const ProductScreen = {
@@ -11,7 +11,7 @@ const ProductScreen = {
 
     render: async () => {
         const request = parseRequestUrl();
-        const product = await getProduct(request.id);
+        const product = await getProducts(request.id);
         if(product.error) {
             return `<h1>${product.error}</h1>`
         }

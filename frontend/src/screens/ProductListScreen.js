@@ -1,12 +1,19 @@
-import { getProduct } from "../api/api";
+import { createProduct, getProducts } from "../api/api";
 import DashboardMebnu from "./../components/DashBoardMenu";
 
 
 const ProductListScreen = {
 
+    after_render: () => {
+        document.getElementById('create-product-button')
+                .addEventListener('click', async () => {
+                    const data = await createProduct();
+                    document.location.hash = `/product/${data.product._id}/edit`;
+                });
+    },
+
     render: async () => {
-        const products = await getProduct();
-        // console.log(products);
+        const products = await getProducts();
         return `
             <div class="dashboard">
                 ${DashboardMebnu.render({selected: 'product'})}

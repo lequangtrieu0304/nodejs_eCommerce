@@ -597,3 +597,47 @@ td img {
     color: blue;
 }
 
+/* edit form */
+.content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.content > div {
+    margin: 2rem 2rem;
+}
+
+#edit-product-form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    background-color: #F2F2F2;
+    padding: 2rem;
+}
+
+#edit-product-form > div {
+    margin: 1rem 3rem;
+}
+
+.form-left > div,
+.form-right > div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.form-right {
+    margin-top: 2rem;
+}
+
+.form-left > div input,
+.form-right > div input {
+    margin: 0;
+}
+
+.form-left,
+.form-right {
+    flex: 1 1;
+}

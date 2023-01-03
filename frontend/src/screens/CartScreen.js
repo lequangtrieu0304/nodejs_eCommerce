@@ -1,4 +1,4 @@
-import { getProduct } from "../api/api";
+import { getProducts } from "../api/api";
 import { getCartItems, setCartItems } from "../localStorage";
 import { parseRequestUrl, rerender } from "../utils";
 
