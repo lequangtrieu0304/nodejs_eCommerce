@@ -1,4 +1,4 @@
-import { getProduct, getProducts } from '../api/api';
+import { getProduct, getProductById, getProducts } from '../api/api';
 import Rating from '../components/Rating';
 import { parseRequestUrl } from '../utils'
 const ProductScreen = {
@@ -11,7 +11,7 @@ const ProductScreen = {
 
     render: async () => {
         const request = parseRequestUrl();
-        const product = await getProducts(request.id);
+        const product = await getProductById(request.id);
         if(product.error) {
             return `<h1>${product.error}</h1>`
         }
@@ -64,4 +64,4 @@ const ProductScreen = {
         `;
     }
 }
-export default ProductScreen
+export default ProductScreen;

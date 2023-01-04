@@ -1,4 +1,4 @@
-import { getProducts } from "../api/api";
+import { getProductById, getProducts } from "../api/api";
 import { getCartItems, setCartItems } from "../localStorage";
 import { parseRequestUrl, rerender } from "../utils";
 
@@ -55,7 +55,7 @@ const CartScreen = {
     render: async () => {
         const request = parseRequestUrl();
         if(request.id) {
-            const product = await getProduct(request.id);
+            const product = await getProductById(request.id);
             addToCart({
                 product: product._id,
                 name: product.name,

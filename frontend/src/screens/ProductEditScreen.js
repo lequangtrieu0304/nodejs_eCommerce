@@ -74,7 +74,7 @@ const ProductEditScreen = {
                                     <input type="text" name="image" value="${product.image}" id="image" />
                                     <input type="file" name="image-file" id="image-file" />
                                 </div>
-                                
+                    
                             </div>
 
                             <div class="form-right">
@@ -82,11 +82,11 @@ const ProductEditScreen = {
                                     <label for="brand">Brand</label>
                                     <input type="text" name="brand" value="${product.brand}" id="brand" />
                                 </div>
-                                <div >
+                                <div>
                                     <label for="countInStock">Count In Stock</label>
                                     <input type="text" name="countInStock" value="${product.countInStock}" id="countInStock" />
                                 </div>
-                                <div class="form-right">
+                                <div>
                                     <label for="category">Category</label>
                                     <input type="text" name="category" value="${product.category}" id="category" />
                                 </div>
